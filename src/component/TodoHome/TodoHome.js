@@ -11,14 +11,14 @@ const TodoHome = () => {
 
     
     useEffect(() => {
-        fetch('http://localhost:5000/task')
+        fetch('https://cryptic-journey-46514.herokuapp.com/task')
             .then(res => res.json())
             .then(data => setTasks(data));
     }, [shouldRemount])
 
     const onSubmit = data => {
         console.log(data);
-        const url = `http://localhost:5000/addtask`;
+        const url = `https://cryptic-journey-46514.herokuapp.com/addtask`;
         fetch(url, {
             method: 'POST',
             headers: {

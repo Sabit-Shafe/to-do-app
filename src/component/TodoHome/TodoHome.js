@@ -30,18 +30,18 @@ const TodoHome = () => {
             .then(result => {
                 console.log(result);
                 setShouldRemount(!shouldRemount)
-                result = ("");
+                
             })
 
     };
     return (
-        <div className="d-flex justify-content-evenly container mt-5">
+        <div className="d-flex justify-content-evenly container mt-5 ">
             <div className=" w-25 mx-5 ">
                 <h2>Task add</h2>
                 <form className='d-flex flex-column ' onSubmit={handleSubmit(onSubmit)}>
                     <input className='mb-2' placeholder='Task Name' {...register("task", { required: true, maxLength: 100 })} />
                     <textarea className='mb-2' placeholder='Description' {...register("description")} />
-                    <input type="submit" value="Add Task" />
+                    <input className="bg-info rounded" type="submit" value="Add Task" />
                 </form>
             </div>
             <div className="w-75 mt-5">
